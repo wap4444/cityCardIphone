@@ -19,6 +19,13 @@
 <plugin name="cordova-plugin-network-information" spec="1.2.1" />
 <plugin name="cordova-plugin-whitelist" spec="1.2.2" />
 <plugin name="onesignal-cordova-plugin"  source="npm" />
+    
+    <!-- add a version here, otherwise PGB will use whatever the latest version of the package on npm is -->
+<plugin name="phonegap-plugin-barcodescanner" />
+    <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+    <string>To scan barcodes</string>
+</edit-config>
+    
 <plugin name="cordova-plugin-splashscreen" source="npm" spec="latest" />
     <platform name="ios">
         <icon height="57" platform="ios" src="res/icon/Icon-App-57x57@1x.png" width="57" />
