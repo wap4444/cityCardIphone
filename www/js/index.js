@@ -23,10 +23,9 @@ var ref = cordova.InAppBrowser.open('http://citycard.smart-pavlodar.kz/app/?push
 $("#BtnEnt" ).click(function() {
   cordova.plugins.barcodeScanner.scan(
       function (result) {
-          alert("We got a barcode\n" +
-                "Result: " + result.text + "\n" +
-                "Format: " + result.format + "\n" +
-                "Cancelled: " + result.cancelled);
+          if(result.cancelled=='0'){
+          $('#tInput').val(result.text);
+          }else{}
       },
       function (error) {
           alert("Scanning failed: " + error);
