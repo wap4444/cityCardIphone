@@ -10,14 +10,11 @@ var app = {
     },
     receivedEvent: function(id) {
    document.addEventListener("offline", onOffline, false);
-function onOffline() {
-ref.close();
-}
+	    
+function onOffline() {}
 document.addEventListener("online", onOnline, false);
  
-function onOnline() {
-var ref = cordova.InAppBrowser.open('http://citycard.smart-pavlodar.kz/app/?push='+localStorage.ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
-}
+function onOnline() {}
         
         
 function didReceiveRemoteNotificationCallBack(jsonData) {}
