@@ -15,14 +15,43 @@
 <body>
 <div class="useBlock" id="MAP" style="height:500px;">
 </div>
+	
+	
+	
+	
+	
+	
+	
+	
 <div class="useBlock active" id="cardBlock">
 <div class="row" style="padding-top:50px;">
-  <div class="col-sm-12 text-center"><img src="img/logo.png" width="200px"><br><img src="img/img_logo.png" width="100px"></div>
+  <div class="col-sm-12 text-center"><img src="logo.png" width="200px"><br><img src="img_logo.png" width="100px"></div>
+  <div class="col-sm-12 text-center" style="padding-top:50px;">
+Добро пожаловать в систему CityCard. Пожалуйста добавьте карту.
+	<br>
+<button type="button" class="btn btn-outline-dark btn-lg showBlock" id="activBtn" blname="activationBlock" style="width:70%;border-radius:50px;margin-top:25px;">ДОБАВИТЬ КАРТУ</button>
+	</div>
+  </div>
+</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+<div class="useBlock" id="activationBlock">
+<div class="row" style="padding-top:50px;">
+  <div class="col-sm-12 text-center"><img src="logo.png" width="200px"><br><img src="img_logo.png" width="100px"></div>
   <div class="col-sm-12 text-center" style="padding-top:50px;">
 	<div class="input-group input-group-lg" style="display: inline;">
 	<input type="number" class="form-control" id="inputCard" style="width:70%;border-radius:50px;     display: inline;   background: #c3c300;" placeholder="Введите номер карты">
 	<br>
-<button type="button" class="btn btn-outline-dark btn-lg" id="BtnEnt" style="width:70%;border-radius:50px;margin-top:25px;">Сканировать код</button>
+	<button type="button" class="btn btn-outline-dark btn-lg" id="BtnEnt" style="width:70%;border-radius:50px;margin-top:25px;">Сканировать код</button>
 
 <div class="alert alert-danger" id="alertCardError" style="display:none;" role="alert"></div>
 	<br>
@@ -31,6 +60,15 @@
   </div>
 </div>
 </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
     
 <div class="useBlock" id="infoBlock">
 <div class="row" style="padding-top:50px;">
@@ -231,7 +269,7 @@
 <script src="jquery.min.js"></script>
 <script src="popper.min.js"></script>
 <script src="bootstrap.min.js"></script>
-<script src="//api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript"></script>
+<script src="http://api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript"></script>
 <script src="app.js"></script>
 	
     <script type="text/javascript" src="js/index.js"></script>
