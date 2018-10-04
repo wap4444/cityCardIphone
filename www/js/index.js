@@ -44,7 +44,6 @@ $(document).on("click","#BtnEnt",function() {
   cordova.plugins.barcodeScanner.scan(
       function (result) {
           if(result.cancelled=='0'){
-		  alert('Aut '+result.text);
           $('#inputCard').val(result.text);
           }else{}
       },
@@ -75,7 +74,6 @@ $(document).on("click","#BtnEnt",function() {
   cordova.plugins.barcodeScanner.scan(
       function (result_pay) {
           if(result_pay.cancelled=='0'){
-		  alert('PAY - '+result_pay.text);
 busPay(result_pay.text);
           }else{}
       },
