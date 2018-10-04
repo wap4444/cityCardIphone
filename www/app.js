@@ -30,7 +30,7 @@ if(!inputCard){
 function authCard(inputCard){
 	console.log('Функция authCard со значением '+inputCard);
 	
-$.ajax({type: 'POST',url: 'api/cardSearch.php',data:{cardNo:inputCard},
+$.ajax({type: 'POST',url: 'http://citycard.smart-pavlodar.kz/app/api/cardSearch.php',data:{cardNo:inputCard},
 success: function(data) {
 console.log(data);
 response = JSON.parse(data);
