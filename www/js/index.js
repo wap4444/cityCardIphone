@@ -24,7 +24,7 @@ $("#BtnEnt" ).click(function() {
   cordova.plugins.barcodeScanner.scan(
       function (result) {
           if(result.cancelled=='0'){
-          $('#tInput').val(result.text);
+          $('#inputCard').val(result.text);
           }else{}
       },
       function (error) {
