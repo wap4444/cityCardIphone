@@ -18,6 +18,29 @@ document.addEventListener("online", onOnline, false);
 function onOnline() {
 var ref = cordova.InAppBrowser.open('http://citycard.smart-pavlodar.kz/app/?push='+localStorage.ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
 }
+        
+        
+function didReceiveRemoteNotificationCallBack(jsonData) {}
+function didOpenRemoteNotificationCallBack(jsonData) {}       
+        //Настройка ПУШЕЙ ДЛЯ АЙФОНА
+        var iosSettings = {};
+        iosSettings["kOSSettingsKeyAutoPrompt"] = true;
+        iosSettings["kOSSettingsKeyInAppLaunchURL"] = true;
+
+        //ПОДКЛЮЧЕНИЕ ПУШЕЙ 
+           window.plugins.OneSignal
+          .startInit("6e9818ed-954b-48fe-96cd-3622d5252ffa")
+          .handleNotificationReceived(didReceiveRemoteNotificationCallBack)
+          .handleNotificationOpened(didOpenRemoteNotificationCallBack)
+		  .inFocusDisplaying(window.plugins.OneSignal.OSInFocusDisplayOption.None)
+          .iOSSettings(iosSettings)
+          .endInit();
+        
+window.plugins.OneSignal.getIds(function(ids) {
+ipush = ids.userId;
+localStorage.ipush=ipush;
+    alert(localStorage.ipush);
+});
 
 
 $("#BtnEnt" ).click(function() {
