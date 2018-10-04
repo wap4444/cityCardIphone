@@ -8,7 +8,10 @@
         Kerri Shotts
     </author>
     <content src="index.html" />
-    <preference name="DisallowOverscroll" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="Fullscreen" value="true" />
+    
+    
     <preference name="target-device" value="handset" />
     <preference name="orientation" value="portrait" />
     <preference name="phonegap-version" value="cli-7.1.0" />
