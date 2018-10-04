@@ -88,7 +88,7 @@ controls: []
 firstButton = new ymaps.control.Button("Кнопка");
 myMap.controls.add(firstButton, {float: 'right'});
 	
-myMap.geoObjects.add(new ymaps.Placemark([52.2635,76.7936],{hintContent: "ДОБРОЛЮБОВА, 23"},{       iconLayout: "default#image",  iconImageHref: "bus.png",              iconColor: "#0095b6"}))
+myMap.geoObjects.add(new ymaps.Placemark([52.2635,76.7936],{hintContent: "ДОБРОЛЮБОВА, 23"},{       iconLayout: "default#image",  iconImageHref: "img/bus.png",              iconColor: "#0095b6"}))
 }
 }
 
