@@ -5,7 +5,8 @@ console.log(gHeight+' - высота');
 myMap ='';
 //WELCOME
 if(localStorage.userId){
-	$('#welcome').html('Карта<br><b>'+localStorage.cardNo+'</b><hr>Баланс карты<br><b>'+localStorage.balans+' тенге</b>');
+		$('#welcome').html('Карта - '+localStorage.cardNo+'<br>Баланс карты - '+localStorage.balans+' тенге\
+	<br><button type="button" class="btn btn-primary btn-lg" id="payBtn" style="width:70%;border-radius:50px;margin-top:25px;">ОПЛАТИТЬ ПРОЕЗД</button>');
 	checkBalans(localStorage.cardNo);
 }
 function checkBalans(inputCard){
@@ -59,13 +60,13 @@ console.log(response.resp);
 if(response.resp=='error'){
 		$('#alertCardError').html('Карта не найдена. Повторите попытку').show();
 }else{
-		$('#alertCardError').html('Добро пожаловать '+response.sotrFam+' '+response.sotrName+' '+response.sotrOtc).show();
 		localStorage.userId=response.id;
 		localStorage.cardNo=response.cardNo;
 		localStorage.balans=response.balans;
 	$('.useBlock').hide();
 	$('#cardBlock').show();
-	$('#welcome').html('Карта<br><b>'+localStorage.cardNo+'</b><hr>Баланс карты<br><b>'+localStorage.balans+' тенге</b>');
+		$('#welcome').html('Карта - '+localStorage.cardNo+'<br>Баланс карты - '+localStorage.balans+' тенге\
+	<br><button type="button" class="btn btn-primary btn-lg" id="payBtn" style="width:70%;border-radius:50px;margin-top:25px;">ОПЛАТИТЬ ПРОЕЗД</button>');
 }
 }
 });
