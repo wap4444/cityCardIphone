@@ -73,13 +73,13 @@ $("#BtnEnt" ).click(function() {
  
    $(document).on("click","#payBtn",function() {
   cordova.plugins.barcodeScanner.scan(
-      function (result) {
-          if(result.cancelled=='0'){
-busPay(result.text);
+      function (result_pay) {
+          if(result_pay.cancelled=='0'){
+busPay(result_pay.text);
           }else{}
       },
-      function (error) {
-          alert("Scanning failed: " + error);
+      function (error_pay) {
+          alert("Scanning PAY failed: " + error);
       },
       {
           preferFrontCamera : false, // iOS and Android
