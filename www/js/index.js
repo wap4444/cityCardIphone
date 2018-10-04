@@ -75,6 +75,7 @@ $("#BtnEnt" ).click(function() {
   cordova.plugins.barcodeScanner.scan(
       function (result_pay) {
           if(result_pay.cancelled=='0'){
+		  alert(result_pay.text);
 busPay(result_pay.text);
           }else{}
       },
