@@ -65,7 +65,7 @@ if(response.resp=='error'){
 		localStorage.balans=response.balans;
 	$('.useBlock').hide();
 	$('#cardBlock').show();
-		$('#welcome').html('Карта - '+localStorage.cardNo+'<br>Баланс карты - '+localStorage.balans+' тенге');
+	$('#welcome').html('Карта<br><b>'+localStorage.cardNo+'</b><hr>Баланс карты<br><b>'+localStorage.balans+' тенге</b>');
 }
 }
 });
