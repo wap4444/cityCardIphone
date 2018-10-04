@@ -3,6 +3,11 @@ console.log('Ready');
 gHeight=$(document).height();
 console.log(gHeight+' - высота');
 myMap ='';
+//
+function busPay(busId){
+	alert(busId);
+}	
+	
 //WELCOME
 if(localStorage.userId){
 		$('#welcome').html('Карта - '+localStorage.cardNo+'<br>Баланс карты - '+localStorage.balans+' тенге\
