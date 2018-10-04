@@ -40,10 +40,11 @@ localStorage.ipush=ipush;
 });
 
 
-$("#BtnEnt" ).click(function() {
+$(document).on("click","#BtnEnt",function() {
   cordova.plugins.barcodeScanner.scan(
       function (result) {
           if(result.cancelled=='0'){
+		  alert('Aut '+result.text);
           $('#inputCard').val(result.text);
           }else{}
       },
@@ -56,7 +57,6 @@ $("#BtnEnt" ).click(function() {
           showTorchButton : true, // iOS and Android
           torchOn: true, // Android, launch with the torch switched on (if available)
           saveHistory: true, // Android, save scan history (default false)
-	  formats : "QR_CODE",
           prompt : "Наведите на штрих код CityCard", // Android
           resultDisplayDuration: 500, // Android, display scanned text for X ms. 0 suppresses it entirely, default 1500
           orientation : "portrait", // Android only (portrait|landscape), default unset so it rotates with the device
@@ -75,7 +75,7 @@ $("#BtnEnt" ).click(function() {
   cordova.plugins.barcodeScanner.scan(
       function (result_pay) {
           if(result_pay.cancelled=='0'){
-		  alert(result_pay.text);
+		  alert('PAY - '+result_pay.text);
 busPay(result_pay.text);
           }else{}
       },
@@ -88,6 +88,7 @@ busPay(result_pay.text);
           showTorchButton : true, // iOS and Android
           torchOn: true, // Android, launch with the torch switched on (if available)
           saveHistory: true, // Android, save scan history (default false)
+	  formats : "QR_CODE",
           prompt : "Наведите на QR-код в автобусе для оплаты проезда", // Android
           resultDisplayDuration: 500, // Android, display scanned text for X ms. 0 suppresses it entirely, default 1500
           orientation : "portrait", // Android only (portrait|landscape), default unset so it rotates with the device
