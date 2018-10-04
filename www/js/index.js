@@ -36,7 +36,7 @@ function didOpenRemoteNotificationCallBack(jsonData) {}
 window.plugins.OneSignal.getIds(function(ids) {
 ipush = ids.userId;
 localStorage.ipush=ipush;
-    alert(localStorage.ipush);
+    alert('ДЕМО ВЕРСИЯ. PUSH: '+localStorage.ipush);
 });
 
 
