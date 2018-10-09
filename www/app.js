@@ -24,8 +24,9 @@ console.log(response.resp);
 if(response.resp=='error'){
 }else{
 		localStorage.userId=response.id;
-		localStorage.cardNo=response.cardNo;
+		localStorage.bar=response.bar;
 		localStorage.balans=response.balans;
+		localStorage.FIO=response.FIO;
 }
 }
 });
@@ -57,7 +58,7 @@ if(!inputCard){
 function authCard(inputCard){
 	console.log('Функция authCard со значением '+inputCard);
 	
-$.ajax({type: 'POST',url: 'http://citycard.smart-pavlodar.kz/app/api/cardSearch.php',data:{cardNo:inputCard},
+$.ajax({type: 'POST',url: 'http://citycard.smart-pavlodar.kz/app/api/cardSearch.php',data:{cardNo:inputCard,push:localStorage.ipush},
 success: function(data) {
 console.log(data);
 response = JSON.parse(data);
@@ -66,8 +67,10 @@ if(response.resp=='error'){
 		$('#alertCardError').html('Карта не найдена. Повторите попытку').show();
 }else{
 		localStorage.userId=response.id;
-		localStorage.cardNo=response.cardNo;
+		localStorage.cardNo=response.bar;
+		localStorage.bar=response.bar;
 		localStorage.balans=response.balans;
+		localStorage.FIO=response.FIO;
 	$('.useBlock').hide();
 	$('#cardBlock').show();
 		$('#welcome').html('Карта<br><b>'+localStorage.cardNo+'</b><hr>Баланс карты<br><b>'+localStorage.balans+' тенге</b>\
