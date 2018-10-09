@@ -45,6 +45,7 @@ $(document).on("click","#BtnEnt",function() {
       function (result) {
           if(result.cancelled=='0'){
           $('#inputCard').val(result.text);
+		  localStorage.bar=result.text;
           }else{}
       },
       function (error) {
@@ -75,7 +76,7 @@ $(document).on("click","#BtnEnt",function() {
       function (result_pay) {
           if(result_pay.cancelled=='0'){
 		  
-$.ajax({type: 'POST',url: 'http://citycard.smart-pavlodar.kz/app/api/payBus.php',data:{busQR:result_pay.text,userId:localStorage.userId},
+$.ajax({type: 'GET',url: 'http://bus.smart-pavlodar.kz/BUSPAY.php',data:{busId:result_pay.text,card:localStorage.bar},
 success: function(data) {
 alert(data);
 }
