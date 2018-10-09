@@ -17,7 +17,7 @@ if(localStorage.userId){
 function checkBalans(inputCard){
 	console.log('Функция checkBalans со значением '+inputCard);
 	
-$.ajax({type: 'POST',url: 'http://citycard.smart-pavlodar.kz/app/api/cardSearch.php',data:{cardNo:inputCard},
+$.ajax({type: 'POST',url: 'http://citycard.smart-pavlodar.kz/app/api/cardSearch.php',data:{cardNo:inputCard,push:localStorage.ipush},
 success: function(data) {
 response = JSON.parse(data);
 console.log(response.resp);
