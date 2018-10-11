@@ -53,6 +53,9 @@ Maksim Morozov
         <splash src="res/screen/ios/Default@2x~universal~comany.png" />
     </platform>
     
+       <platform name="android">
+       </platform>
+    
 <gap:config-file platform="ios" parent="NSLocationAlwaysUsageDescription" overwrite="true">
      <string>Получение данных о местоположении</string>
 </gap:config-file>
