@@ -17,8 +17,12 @@ document.addEventListener("online", onOnline, false);
 function onOnline() {}
         
         
-function didReceiveRemoteNotificationCallBack(jsonData) {}
-function didOpenRemoteNotificationCallBack(jsonData) {}       
+function didReceiveRemoteNotificationCallBack(jsonData) {
+alert('didReceiveRemoteNotificationCallBack|'+jsonData.payload.additionalData.ssylka);
+}
+function didOpenRemoteNotificationCallBack(jsonData) {
+alert('didOpenRemoteNotificationCallBack|'+jsonData.payload.additionalData.ssylka);
+}       
         //Настройка ПУШЕЙ ДЛЯ АЙФОНА
         var iosSettings = {};
         iosSettings["kOSSettingsKeyAutoPrompt"] = true;
