@@ -54,6 +54,11 @@ Maksim Morozov
     </platform>
     
        <platform name="android">
+        <icon src="res/icon/android/drawable-mdpi-icon.png" density="mdpi" />
+     	<icon src="res/icon/android/drawable-hdpi-icon.png" density="hdpi" />
+     	<icon src="res/icon/android/drawable-xhdpi-icon.png" density="xhdpi" />
+     	<icon src="res/icon/android/drawable-xxhdpi-icon.png" density="xxhdpi" />
+     	<icon src="res/icon/android/drawable-xxxhdpi-icon.png" density="xxxhdpi" />
        </platform>
     
 <gap:config-file platform="ios" parent="NSLocationAlwaysUsageDescription" overwrite="true">
