@@ -18,10 +18,10 @@ function onOnline() {}
         
         
 function didReceiveRemoteNotificationCallBack(jsonData) {
-alert('didReceiveRemoteNotificationCallBack|'+jsonData.payload.additionalData.ssylka);
+alert('Внутренний пуш|'+jsonData.payload.additionalData.ssylka);
 }
 function didOpenRemoteNotificationCallBack(jsonData) {
-alert('didOpenRemoteNotificationCallBack|'+jsonData.payload.additionalData.ssylka);
+alert('Внешний|'+jsonData.payload.additionalData.ssylka);
 }       
         //Настройка ПУШЕЙ ДЛЯ АЙФОНА
         var iosSettings = {};
