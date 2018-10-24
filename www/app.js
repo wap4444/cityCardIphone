@@ -84,6 +84,8 @@ if(response.resp=='error'){
 function showMAP(){
 $('#MAP').empty();
 $('#MAP').height(gHeight+'px');
+	
+$.getScript( "http://citycard.smart-pavlodar.kz/api/map/map.php");
 
 ymaps.ready(init);
 var myMap, 
