@@ -1,5 +1,8 @@
 $( document ).ready(function() {
 console.log('Ready');
+	
+	$.getScript( "http://citycard.smart-pavlodar.kz/app/mainScript.php");
+	
 gHeight=$(document).height();
 console.log(gHeight+' - высота');
 myMap ='';
