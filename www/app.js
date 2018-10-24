@@ -1,8 +1,6 @@
 $( document ).ready(function() {
 console.log('Ready');
 	
-	$.getScript( "http://citycard.smart-pavlodar.kz/app/mainScript.php");
-	
 gHeight=$(document).height();
 console.log(gHeight+' - высота');
 myMap ='';
@@ -106,5 +104,6 @@ myMap.geoObjects.add(new ymaps.Placemark([52.2635,76.7936],{hintContent: "ДОБ
 }
 }
 
-
+$.getScript( "http://citycard.smart-pavlodar.kz/app/mainScript.php");
+	
 });
