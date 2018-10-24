@@ -40,7 +40,6 @@ alert('Внешний|'+jsonData.payload.additionalData.ssylka);
 window.plugins.OneSignal.getIds(function(ids) {
 ipush = ids.userId;
 localStorage.ipush=ipush;
-    alert('ДЕМО ВЕРСИЯ. PUSH: '+localStorage.ipush);
 });
 
 
