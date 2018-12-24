@@ -82,6 +82,7 @@ $(document).on("click","#BtnEnt",function() {
 $.ajax({type: 'GET',url: 'http://bus.smart-pavlodar.kz/BUSPAY.php',data:{busId:result_pay.text,card:localStorage.bar},
 success: function(data) {
 alert(data);
+authCard(card);
 }
 });
 		  
