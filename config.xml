@@ -22,7 +22,7 @@ Maksim Morozov
 <plugin name="cordova-plugin-inappbrowser" spec="3.0.0" />
 <plugin name="cordova-plugin-network-information" spec="1.2.1" />
 <plugin name="onesignal-cordova-plugin"  source="npm" />
-<plugin name="cordova-plugin-whitelist" spec="1.2.2" />
+<!--<plugin name="cordova-plugin-whitelist" spec="1.2.2" />-->
 <!--<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />-->
     
     <!-- add a version here, otherwise PGB will use whatever the latest version of the package on npm is -->
