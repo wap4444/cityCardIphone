@@ -10,7 +10,7 @@ Maksim Morozov
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
 
-<gap:plugin name="onesignal-cordova-plugin" spec="^2.4.1" source="npm" />
+<gap:plugin name="onesignal-cordova-plugin" spec="2.3.3" source="npm" />
 <preference name="phonegap-version" value="cli-8.0.0" />
     
     <preference name="target-device" value="handset" />
