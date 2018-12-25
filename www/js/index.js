@@ -82,7 +82,27 @@ $(document).on("click","#BtnEnt",function() {
 $.ajax({type: 'GET',url: 'http://bus.smart-pavlodar.kz/BUSPAY.php',data:{busId:result_pay.text,card:localStorage.bar},
 success: function(data) {
 alert(data);
-authCard(card);
+	
+	
+$.ajax({type: 'POST',url: 'http://citycard.smart-pavlodar.kz/app/api/cardSearch.php',data:{cardNo:localStorage.cardNo,push:localStorage.ipush},
+success: function(data) {
+response = JSON.parse(data);
+console.log(response.resp);
+if(response.resp=='error'){
+}else{
+		localStorage.userId=response.id;
+		localStorage.bar=response.bar;
+		localStorage.balans=response.balans;
+		localStorage.FIO=response.FIO;
+	
+	$('#welcome').html('Карта<br><b>'+localStorage.cardNo+'</b><hr>Баланс карты<br><b>'+localStorage.balans+' тенге</b>\
+	<br><button type="button" class="btn btn-primary btn-lg" id="payBtn" style="width:70%;border-radius:50px;margin-top:25px;">ОПЛАТИТЬ ПРОЕЗД</button>');
+
+}
+}
+});
+	
+	
 }
 });
 		  
