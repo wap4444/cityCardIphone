@@ -11,9 +11,9 @@ function busPay(busId){
 	
 //WELCOME
 if(localStorage.userId){
-		$('#welcome').html('Карта<br><b>'+localStorage.cardNo+'</b><hr>Баланс карты<br><b>'+localStorage.balans+' тенге</b>\
-	<br><button type="button" class="btn btn-primary btn-lg" id="payBtn" style="width:70%;border-radius:50px;margin-top:25px;">ОПЛАТИТЬ ПРОЕЗД</button>');
 	checkBalans(localStorage.cardNo);
+	$('#welcome').html('Карта<br><b>'+localStorage.cardNo+'</b><hr>Баланс карты<br><b>'+localStorage.balans+' тенге</b>\
+	<br><button type="button" class="btn btn-primary btn-lg" id="payBtn" style="width:70%;border-radius:50px;margin-top:25px;">ОПЛАТИТЬ ПРОЕЗД</button>');
 }
 function checkBalans(inputCard){
 	console.log('Функция checkBalans со значением '+inputCard);
