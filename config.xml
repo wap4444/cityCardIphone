@@ -61,11 +61,11 @@ Maksim Morozov
      	<icon src="res/icon/android/drawable-xxhdpi-icon.png" density="xxhdpi" />
      	<icon src="res/icon/android/drawable-xxxhdpi-icon.png" density="xxxhdpi" />
            
-    <resource-file src="locales/android/drawable-mdpi/ic_stat_onesignal_default.png" target="res/icon/android/drawable-mdpi/ic_stat_onesignal_default.png" />
-    <resource-file src="locales/android/drawable-hdpi/ic_stat_onesignal_default.png" target="res/icon/android/drawable-hdpi/ic_stat_onesignal_default.png" />
-    <resource-file src="locales/android/drawable-xhdpi/ic_stat_onesignal_default.png" target="res/icon/android/drawable-xhdpi/ic_stat_onesignal_default.png" />
-    <resource-file src="locales/android/drawable-xxhdpi/ic_stat_onesignal_default.png" target="res/icon/android/drawable-xxhdpi/ic_stat_onesignal_default.png" />
-    <resource-file src="locales/android/drawable-xxxhdpi/ic_stat_onesignal_default.png" target="res/icon/android/drawable-xxxhdpi/ic_stat_onesignal_default.png" />
+    <resource-file src="locales/android/drawable-mdpi/ic_stat_onesignal_default.png" target="res/icon/android/ic_stat_onesignal_default_mdpi.png" />
+    <resource-file src="locales/android/drawable-hdpi/ic_stat_onesignal_default.png" target="res/icon/android/ic_stat_onesignal_default_hdpi.png" />
+    <resource-file src="locales/android/drawable-xhdpi/ic_stat_onesignal_default.png" target="res/icon/android/ic_stat_onesignal_default_xhdpi.png" />
+    <resource-file src="locales/android/drawable-xxhdpi/ic_stat_onesignal_default.png" target="res/icon/android/ic_stat_onesignal_default_xxhdpi.png" />
+    <resource-file src="locales/android/drawable-xxxhdpi/ic_stat_onesignal_default.png" target="res/icon/android/ic_stat_onesignal_default_xxxhdpi.png" />
            
        </platform>
     
